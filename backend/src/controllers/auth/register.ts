@@ -21,7 +21,7 @@ const register = async (req: Request, res: Response) => {
     maxAge: ms(AUTH_REFRESH_TOKEN_EXPIRY || '7d'),
   });
 
-  res.send({
+  res.status(201).send({
     user: {
       email: user.email,
       name: user.name,

@@ -6,7 +6,7 @@ import { Request, Response } from 'express';
 const postOrder = async (req: Request, res: Response) => {
   const order = req.body;
   await validateOrder(order);
-  res.send({
+  res.status(201).send({
     id: randomUUID(),
     total: order.total,
   });

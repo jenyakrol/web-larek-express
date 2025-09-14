@@ -44,7 +44,7 @@ const patch = async (req: Request, res: Response) => {
     new: true,
   });
 
-  res.send(newProduct);
+  res.status(201).send(newProduct);
 };
 
 const deleteRoute = async (req: Request, res: Response) => {
